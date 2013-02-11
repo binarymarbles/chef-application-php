@@ -19,6 +19,6 @@
 
 include Chef::Resource::ApplicationBase
 
-attribute :worker_processes, :kind_of => Integer, :default => [node['cpu']['total'].to_i * 4, 8].min
+attribute :worker_processes, :kind_of => Integer, :default => 4
 attribute :worker_max_requests, :kind_of => Integer, :default => 1000
 attribute :worker_port, :kind_of => Integer, :default => 10000
